@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <input type="file" id="fileInput" />
+    <button onclick="handleFile()">Upload</button>
+    <p id="fileName"></p>
+
+    <script>
+        function handleFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            const fileNameDisplay = document.getElementById('fileName');
+            
+            if (file) {
+                fileNameDisplay.innerText = `Selected file: ${file.name}`;
+            } else {
+                fileNameDisplay.innerText = 'No file selected';
+            }
+        }
+    </script>
+</body>
+</html>
